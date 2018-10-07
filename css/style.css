@@ -1,0 +1,512 @@
+@charset 'UTF-8';
+
+@font-face{font-family:'FontAwesome';src:url('font/fontawesome-webfont.eot?v=4.0.1');src:url('font/fontawesome-webfont.eot?#iefix&v=4.0.1') format('embedded-opentype'),url('font/fontawesome-webfont.woff?v=4.0.1') format('woff'),url('font/fontawesome-webfont.ttf?v=4.0.1') format('truetype'),url('font/fontawesome-webfont.svg?v=4.0.1#fontawesomeregular') format('svg');font-weight:normal;font-style:normal}
+
+/*
+	Astral 2.5 by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+*/
+
+/*********************************************************************************/
+/* Basic                                                                         */
+/*********************************************************************************/
+
+	*
+	{
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		-o-box-sizing: border-box;
+		-ms-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+
+	body
+	{
+		/*
+			Fallback for browsers that don't support pseudo elements.
+		*/
+
+		background: url('images/bg.jpg');
+	}
+
+		body:before
+		{
+			content: '';
+			position: fixed;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			z-index: -1;
+
+			/*
+				Default background is a weird gradient so I've set it to stretch to
+				100% in both directions. If you replace it with a photo or something,
+				set background-size to "cover".
+			*/
+
+			background: url('images/bg.jpg');
+			background-size: 100% 100%;
+		}
+
+		/*
+			The pseudo element below applies a noise pattern to the background image. It's
+			meant to help mask blurriness, but you can remove it if you don't like it.
+		*/
+
+		body:after
+		{
+			content: '';
+			position: fixed;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background: url('images/overlay.png');
+			z-index: -1;
+		}
+	
+	body, input, textarea
+	{
+		font-family: 'Source Sans Pro', sans-serif;
+		font-weight: 300;
+		color: #777;
+	}
+	
+	strong, b
+	{
+		font-weight: 400;
+		color: #363636;
+	}
+
+	h1, h2, h3, h4,h5, h6
+	{
+		font-weight: 400;
+		color: #363636;
+	}
+	
+	blockquote
+	{
+		border-left: solid 0.5em #ddd;
+		padding: 1em 0 1em 2em;
+		font-style: italic;
+	}
+	
+	em, i
+	{
+		font-style: italic;
+	}
+	
+	hr
+	{
+		border: 0;
+		border-top: solid 1px #ddd;
+		padding: 1.5em 0 0 0;
+		margin: 1.75em 0 0 0;
+	}
+	
+	sub
+	{
+		position: relative;
+		top: 0.5em;
+		font-size: 0.8em;
+	}
+	
+	sup
+	{
+		position: relative;
+		top: -0.5em;
+		font-size: 0.8em;
+	}
+	
+	table
+	{
+		width: 100%;
+	}
+	
+	table.style1
+	{
+		width: 100%;
+	}
+	
+		table.style1 tbody tr:nth-child(2n+2)
+		{
+			background: #f4f4f4;
+		}
+		
+		table.style1 td
+		{
+			padding: 0.5em 1em 0.5em 1em;
+		}
+		
+		table.style1 th
+		{
+			text-align: left;
+			font-weight: 400;
+			padding: 0.5em 1em 0.5em 1em;
+		}
+	
+		table.style1 thead
+		{
+			background: #222222;
+			color: #fff;
+		}
+		
+		table.style1 tfoot
+		{
+			background: #eee;
+		}
+		
+		table.style1 tbody
+		{
+		}
+
+	form
+	{
+	}
+	
+		form input.text,
+		form select,
+		form textarea
+		{
+			border: 0;
+			background: #f0f0f0;
+			padding: 0.65em;
+			width: 100%;
+		}
+
+		form input.button,
+		form input.text,
+		form select,
+		form textarea
+		{
+			-webkit-appearance: none;
+		}
+		
+		form textarea
+		{
+			height: 15em;
+		}
+		
+		form input:focus,
+		form select:focus,
+		form textarea:focus
+		{
+			background: #f5f5f5;
+		}
+
+		form ::-webkit-input-placeholder
+		{
+			color: #999;
+		}
+
+		form :-moz-placeholder
+		{
+			color: #999;
+		}
+
+		form ::-moz-placeholder
+		{
+			color: #999;
+		}
+
+		form :-ms-input-placeholder
+		{
+			color: #999;
+		}		
+
+	br.clear
+	{
+		clear: both;
+	}
+	
+	p, ul, ol, dl, table, blockquote, form
+	{
+		margin-bottom: 2em;
+	}
+	
+	section,
+	article
+	{
+		margin-bottom: 3em;
+	}
+	
+	section > :last-child,
+	article > :last-child
+	{
+		margin-bottom: 0;
+	}
+
+	section:last-child,
+	article:last-child
+	{
+		margin-bottom: 0;
+	}
+
+	.image
+	{
+		display: inline-block;
+	}
+	
+		.image img
+		{
+			display: block;
+			width: 100%;
+		}
+
+	.image-full
+	{
+		display: block;
+		width: 100%;
+		margin: 0 0 2em 0;
+	}
+	
+	.image-left
+	{
+		float: left;
+		margin: 0 2em 2em 0;
+	}
+	
+	.image-centered
+	{
+		display: block;
+		margin: 0 0 2em 0;
+	}
+
+		.image-centered img
+		{
+			margin: 0 auto;
+			width: auto;
+		}
+		
+	.button
+	{
+		display: inline-block;
+		background-color: #222222;
+		color: #fff;
+		border: 0;
+		cursor: pointer;
+		outline: 0;
+		-moz-transition: background-color .25s ease-in-out;
+		-webkit-transition: background-color .25s ease-in-out;
+		-o-transition: background-color .25s ease-in-out;
+		-ms-transition: background-color .25s ease-in-out;
+		transition: background-color .25s ease-in-out;
+	}
+
+		.button:hover
+		{
+			background-color: #333333;
+		}
+		
+		.button:active
+		{
+			background-color: #444444;
+		}
+	
+		.button-alt
+		{
+			background-color: #777777;
+		}
+
+			.button-alt:hover
+			{
+				background-color: #888888;
+			}
+			
+			.button-alt:active
+			{
+				background-color: #999999;
+			}
+	
+		.button-small
+		{
+		}
+		
+		.button-big
+		{
+		}
+		
+		.button-huge
+		{
+		}
+
+	ul.style1
+	{
+		list-style: disc;
+		padding-left: 1em;
+	}
+	
+		ul.style1 li
+		{
+			padding-left: 0.5em;
+		}
+	
+	ul.links
+	{
+	}
+	
+		ul.links li
+		{
+			display: inline-block;
+		}
+
+			ul.links li:before
+			{
+				display: inline;
+				content: '\2022';
+				opacity: 0.5;
+			}
+		
+			ul.links li:first-child:before
+			{
+				display: none;
+			}
+		
+	ol.style1
+	{
+		list-style: decimal;
+		padding-left: 1.25em;
+	}
+
+		ol.style1 li
+		{
+			padding-left: 0.25em;
+		}
+
+	.byline
+	{
+		display: block;
+		color: #aaa;
+	}
+	
+/*********************************************************************************/
+/* Icons                                                                         */
+/* Powered by Font Awesome by Dave Gandy | http://fontawesome.io                 */
+/* Licensed under the SIL OFL 1.1 (font), MIT (CSS)                              */
+/*********************************************************************************/
+
+	.fa
+	{
+		text-decoration: none;
+	}
+
+		.fa.solo
+		{
+		}
+		
+			.fa.solo span
+			{
+				display: none;
+			}
+
+		.fa:before
+		{
+			display:inline-block;
+			font-family: FontAwesome;
+			font-size: 1.25em;
+			text-decoration: none;
+			font-style: normal;
+			font-weight: normal;
+			line-height: 1;
+			-webkit-font-smoothing:antialiased;
+			-moz-osx-font-smoothing:grayscale;
+		}
+
+		.fa-lg{font-size:1.3333333333333333em;line-height:.75em;vertical-align:-15%}
+		.fa-2x{font-size:2em}
+		.fa-3x{font-size:3em}
+		.fa-4x{font-size:4em}
+		.fa-5x{font-size:5em}
+		.fa-fw{width:1.2857142857142858em;text-align:center}
+		.fa-ul{padding-left:0;margin-left:2.142857142857143em;list-style-type:none}.fa-ul>li{position:relative}
+		.fa-li{position:absolute;left:-2.142857142857143em;width:2.142857142857143em;top:.14285714285714285em;text-align:center}.fa-li.fa-lg{left:-1.8571428571428572em}
+		.fa-border{padding:.2em .25em .15em;border:solid .08em #eee;border-radius:.1em}
+		.pull-right{float:right}
+		.pull-left{float:left}
+		.fa.pull-left{margin-right:.3em}
+		.fa.pull-right{margin-left:.3em}
+		.fa-spin{-webkit-animation:spin 2s infinite linear;-moz-animation:spin 2s infinite linear;-o-animation:spin 2s infinite linear;animation:spin 2s infinite linear}
+		@-moz-keyframes spin{0%{-moz-transform:rotate(0deg)} 100%{-moz-transform:rotate(359deg)}}@-webkit-keyframes spin{0%{-webkit-transform:rotate(0deg)} 100%{-webkit-transform:rotate(359deg)}}@-o-keyframes spin{0%{-o-transform:rotate(0deg)} 100%{-o-transform:rotate(359deg)}}@-ms-keyframes spin{0%{-ms-transform:rotate(0deg)} 100%{-ms-transform:rotate(359deg)}}@keyframes spin{0%{transform:rotate(0deg)} 100%{transform:rotate(359deg)}}.fa-rotate-90{filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=1);-webkit-transform:rotate(90deg);-moz-transform:rotate(90deg);-ms-transform:rotate(90deg);-o-transform:rotate(90deg);transform:rotate(90deg)}
+		.fa-rotate-180{filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=2);-webkit-transform:rotate(180deg);-moz-transform:rotate(180deg);-ms-transform:rotate(180deg);-o-transform:rotate(180deg);transform:rotate(180deg)}
+		.fa-rotate-270{filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=3);-webkit-transform:rotate(270deg);-moz-transform:rotate(270deg);-ms-transform:rotate(270deg);-o-transform:rotate(270deg);transform:rotate(270deg)}
+		.fa-flip-horizontal{filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1);-webkit-transform:scale(-1, 1);-moz-transform:scale(-1, 1);-ms-transform:scale(-1, 1);-o-transform:scale(-1, 1);transform:scale(-1, 1)}
+		.fa-flip-vertical{filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1);-webkit-transform:scale(1, -1);-moz-transform:scale(1, -1);-ms-transform:scale(1, -1);-o-transform:scale(1, -1);transform:scale(1, -1)}
+		.fa-stack{position:relative;display:inline-block;width:2em;height:2em;line-height:2em;vertical-align:middle}
+		.fa-stack-1x,.fa-stack-2x{position:absolute;left:0;width:100%;text-align:center}
+		.fa-stack-1x{line-height:inherit}
+		.fa-stack-2x{font-size:2em}
+		.fa-inverse{color:#fff}
+		.fa-folder:before{content:"\f07b"}
+		.fa-home:before{content:"\f015"}
+		.fa-file-o:before{content:"\f016"}
+		.fa-book:before{content:"\f02d"}
+		.fa-chevron-right:before{content:"\f054"}
+		.fa-file-text:before{content:"\f15c"}		
+/*********************************************************************************/
+/* Nav                                                                           */
+/*********************************************************************************/
+	
+	#nav
+	{
+	}
+	
+		#nav a
+		{
+			position: relative;
+			display: inline-block;
+			color: #fff;
+			width: 1em;
+			height: 1em;
+			line-height: 0.9em;
+		}
+
+			#nav a.icon:before
+			{
+				padding-right: 0;
+			}
+		
+/*********************************************************************************/
+/* Panels                                                                        */
+/*********************************************************************************/
+
+	#main
+	{
+		position: relative;
+		overflow: hidden;
+	}
+
+	.panel
+	{
+		position: relative;
+	}
+
+	/* Me */
+	
+		#me
+		{
+		}
+		
+			#me .pic
+			{
+				position: relative;
+				display: block;
+			}
+
+				/*
+					The pseudo element below applies a noise pattern to the "me" image. It's
+					meant to help mask blurriness, but you can remove it if you don't like it.
+				*/
+			
+				#me .pic:before
+				{
+					content: '';
+					position: absolute;
+					top: 0;
+					left: 0;
+					background: url('images/overlay.png');
+					width: 100%;
+					height: 100%;
+					z-index: 1;
+				}
