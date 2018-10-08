@@ -325,11 +325,21 @@
 				margin: 0;
 			}
 			
-			#me .byline
+			#me .byline1
 			{
 				position: absolute;
 				left: 0;
 				top: 52.5%;
+				font-size: 1.2em;
+				letter-spacing: -0.015em;
+				margin-top: 0;
+			}
+
+			#me .byline2
+			{
+				position: absolute;
+				left: 0;
+				top: 58.5%;
 				font-size: 1.2em;
 				letter-spacing: -0.015em;
 				margin-top: 0;
